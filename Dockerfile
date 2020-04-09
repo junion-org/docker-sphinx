@@ -11,9 +11,12 @@ RUN set -x \
         curl \
         python3.7-dev \
         python3.7-distutils \
-        texlive-lang-cjk \
+        texlive-latex-recommended \
+        texlive-latex-extra \
         texlive-fonts-recommended \
         texlive-fonts-extra \
+        texlive-lang-japanese \
+        texlive-lang-cjk \
         make \
     && ln -s /usr/bin/python3.7 /usr/local/bin/python \
     && curl -kL https://bootstrap.pypa.io/get-pip.py -o get-pip.py \
