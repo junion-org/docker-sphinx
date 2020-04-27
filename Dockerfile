@@ -17,12 +17,13 @@ RUN set -x \
         texlive-fonts-extra \
         texlive-lang-japanese \
         texlive-lang-cjk \
+        latexmk \
         make \
     && ln -s /usr/bin/python3.7 /usr/local/bin/python \
     && curl -kL https://bootstrap.pypa.io/get-pip.py -o get-pip.py \
     && python get-pip.py \
     && rm get-pip.py \
-    && pip install sphinx sphinx-rtd-theme \
+    && pip install --no-cache-dir sphinx sphinx-rtd-theme \
     && locale-gen ja_JP.UTF-8 \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/*
